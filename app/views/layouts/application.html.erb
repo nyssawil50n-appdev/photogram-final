@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>PhotogramFinal</title>
+    <title>Startups X Students</title>
     <%= csrf_meta_tags %>
 
     <!-- Expand the number of characters we can use in the document beyond basic ASCII 🎉 -->
@@ -11,10 +11,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= stylesheet_link_tag 'application', media: 'all' %>
+
   </head>
 
   <body>
+    <nav>
+      <ul>
+         <li>
+          <a href="/">Home</a>
+        </li>
+        <li>
+          <a href="/intern_sign_up">Student Sign Up</a>
+        </li>
+        <li>
+          <a href="/company_sign_up">Startup Sign Up</a>
+        </li>
+        <li>
+          <a href="/intern_sign_in">Student Login</a>
+        </li>
+        <li>
+          <a href="/company_sign_in">Startup Login</a>
+        </li>
+        <li>
+          <a href="/intern_sign_out">Student Log Out</a>
+        </li>
+
+        <li>
+          <a href="/company_sign_out">Startup Log Out</a>
+        </li>
+        
+      </ul>
+    </nav>
+
+    <% if notice.present? %>
+    <div style="border: thin green solid; color: green" >
+      <%= notice %>
+    </div>
+    <% end %>
+
+    <% if alert.present? %>
+    <div style="border: thin red solid; color: red">
+      <%= alert %>
+    </div>
+    <% end %>
+
     <%= yield %>
   </body>
+
 </html>

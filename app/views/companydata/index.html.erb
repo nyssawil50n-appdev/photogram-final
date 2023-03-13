@@ -1,0 +1,27 @@
+<h1>Startups</h1>
+
+<table border="1">
+  <tr>
+    <th>
+      Name
+    </th>
+
+    <th>
+      Contact
+    </th>
+
+  </tr>
+
+ <% @company.each do |startup| %>
+  <tr>
+    <td>
+      <%= startup.name %>
+    </td>
+
+    <td>
+      <%= startup.email %>
+    </td>
+
+  </tr>
+  <% end %>
+</table>

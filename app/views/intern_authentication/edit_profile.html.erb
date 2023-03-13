@@ -1,0 +1,48 @@
+<div >
+  <h5>
+    Edit Intern Account
+  </h5>
+
+  <div>
+    <form action="/modify_intern" method="post">
+      <div>
+        <label for="email_box">Email</label>
+        <input id="email_box" name="query_email" value="<%= @current_intern.email %>">
+      </div>
+      <div>
+        <label for="firstname_box">Firstname</label>
+        <input id="firstname_box" name="query_firstname" value="<%= @current_intern.firstname %>">
+      </div>
+      <div>
+        <label for="lastname_box">Lastname</label>
+        <input id="lastname_box" name="query_lastname" value="<%= @current_intern.lastname %>">
+      </div>
+      <div>
+        <label for="year_box">Year</label>
+        <input id="year_box" name="query_year" value="<%= @current_intern.year %>">
+      </div>
+      <div>
+        <label for="major_box">Major</label>
+        <input id="major_box" name="query_major" value="<%= @current_intern.major %>">
+      </div>
+      <div>
+        <label for="university_box">University</label>
+        <input id="university_box" name="query_university" value="<%= @current_intern.university %>">
+      </div>
+
+      <div>
+        <label for="password_box">Password</label>
+        <input id="password_box" name="query_password" placeholder="Choose a password..." type="password">
+      </div>
+    
+      <div>
+        <label for="password_confirmation_box">Password Confirmation</label>
+        <input id="password_confirmation_box" name="query_password_confirmation" placeholder="Confirm your password..." type="password">
+      </div>
+
+      <button>
+        Update account
+      </button>
+    </form>
+  </div>
+</div>
